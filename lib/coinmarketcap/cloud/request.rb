@@ -1,5 +1,5 @@
 module CoinMarketCap
-  module Api
+  module Cloud
     module Request
       def get(path, options = {})
         request(:get, path, options)

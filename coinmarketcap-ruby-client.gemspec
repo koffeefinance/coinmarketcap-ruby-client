@@ -2,7 +2,7 @@ require_relative 'lib/coinmarketcap/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'coinmarketcap-ruby-client'
-  spec.version       = Coinmarketcap::VERSION
+  spec.version       = CoinMarketCap::VERSION
   spec.authors       = ['Mathusan Selvarajah']
   spec.email         = ['mathusans52@gmail.com']
 
@@ -32,4 +32,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'hashie'
   spec.add_development_dependency 'mocha', '~> 1.13'
   spec.add_development_dependency 'rubocop', '0.72.0'
+  spec.add_development_dependency 'vcr', '~> 6.0'
+  spec.add_development_dependency 'webmock', '~> 3.14'
 end

@@ -9,7 +9,11 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
+    crack (0.4.5)
+      rexml
     faraday (1.8.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -31,6 +35,7 @@ GEM
     faraday-rack (1.0.0)
     faraday_middleware (1.1.0)
       faraday (~> 1.0)
+    hashdiff (1.0.1)
     hashie (4.1.0)
     jaro_winkler (1.5.4)
     minitest (5.14.4)
@@ -39,8 +44,10 @@ GEM
     parallel (1.21.0)
     parser (3.0.2.0)
       ast (~> 2.4.1)
+    public_suffix (4.0.6)
     rainbow (3.0.0)
     rake (12.3.3)
+    rexml (3.2.5)
     rubocop (0.72.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -51,6 +58,11 @@ GEM
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     unicode-display_width (1.6.1)
+    vcr (6.0.0)
+    webmock (3.14.0)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   ruby
@@ -61,6 +73,8 @@ DEPENDENCIES
   mocha (~> 1.13)
   rake (~> 12.0)
   rubocop (= 0.72.0)
+  vcr (~> 6.0)
+  webmock (~> 3.14)
 
 BUNDLED WITH
    2.1.4

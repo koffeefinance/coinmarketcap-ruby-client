@@ -1,5 +1,5 @@
 module CoinMarketCap
-  module Api
+  module Cloud
     module Connection
       private
 
@@ -24,7 +24,7 @@ module CoinMarketCap
           ::Faraday::Connection.new(endpoint, options) do |connection|
             connection.use ::Faraday::Request::Multipart
             connection.use ::Faraday::Request::UrlEncoded
-            connection.use ::CoinMarketCap::API::Response::RaiseError
+            connection.use ::CoinMarketCap::Cloud::Response::RaiseError
             connection.use ::FaradayMiddleware::ParseJson, content_type: /\bjson$/
             connection.response(:logger, logger.instance, logger.options, &logger.proc) if logger.instance
             connection.adapter ::Faraday.default_adapter

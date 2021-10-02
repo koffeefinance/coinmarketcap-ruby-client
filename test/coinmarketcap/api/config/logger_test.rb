@@ -33,16 +33,16 @@ module Coinmarketcap
         end
 
         def test_logger_config_can_be_set_via_block
-            setup_logger
-            CoinMarketCap::Api.logger do |logger|
-              logger.instance = @logger
-              logger.options = @opts
-              logger.proc = @proc_arg
-            end
+          setup_logger
+          CoinMarketCap::Api.logger do |logger|
+            logger.instance = @logger
+            logger.options = @opts
+            logger.proc = @proc_arg
+          end
 
-            assert_equal @logger, CoinMarketCap::Api.logger.instance
-            assert_equal @opts, CoinMarketCap::Api.logger.options
-            assert_equal @proc_arg, CoinMarketCap::Api.logger.proc
+          assert_equal @logger, CoinMarketCap::Api.logger.instance
+          assert_equal @opts, CoinMarketCap::Api.logger.options
+          assert_equal @proc_arg, CoinMarketCap::Api.logger.proc
         end
 
         def setup_logger

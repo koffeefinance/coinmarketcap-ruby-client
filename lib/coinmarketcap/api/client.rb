@@ -4,6 +4,9 @@ module CoinMarketCap
     extend Config::Logger::Accessor
 
     class Client
+      include Cloud::Connection
+      include Cloud::Request
+
       attr_accessor(*Config::Client::ATTRIBUTES)
 
       attr_reader :logger

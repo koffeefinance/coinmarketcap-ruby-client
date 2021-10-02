@@ -16,6 +16,7 @@ module CoinMarketCap
           def reset!
             self.endpoint = 'https://pro-api.coinmarketcap.com/v1'
             self.api_key = ENV['COINMARKETCAP_API_KEY']
+            self.user_agent = "CoinMarketCap Ruby Client/#{CoinMarketCap::VERSION}"
           end
         end
 
