@@ -29,9 +29,8 @@ module CoinMarketCap
       end
 
       def test_default_client_attributes_are_set
-        CoinMarketCap::Api::Config::Client::ATTRIBUTES.each do |key|
-          assert_equal @client.send(key), CoinMarketCap::Api::Config::Client.send(key)
-        end
+        assert_nil CoinMarketCap::Api::Config::Client.send('api_key')
+        assert_nil @client.send('api_key')
       end
 
       def test_attributes_set_with_custom_settings

@@ -15,7 +15,7 @@ module CoinMarketCap
           options[:headers]['Accept'] = 'application/json; charset=utf-8'
           options[:headers]['Content-Type'] = 'application/json; charset=utf-8'
           options[:headers]['User-Agent'] = user_agent if user_agent
-          options[:headers]['X-CMC_PRO_API_KEY'] = api_key
+          options[:headers]['X-CMC_PRO_API_KEY'] = api_key || ''
 
           request_options = {}
           request_options[:params_encoder] = Faraday::FlatParamsEncoder
