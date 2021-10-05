@@ -4,6 +4,8 @@ module CoinMarketCap
     extend Config::Logger::Accessor
 
     class Client
+      include Endpoints::Cryptocurrency
+
       include Cloud::Connection
       include Cloud::Request
 

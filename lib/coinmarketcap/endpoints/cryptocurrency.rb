@@ -3,7 +3,7 @@ module CoinMarketCap
     module Cryptocurrency
       def map(options = {})
         response = get('cryptocurrency/map', {}.merge(options))
-        response.map { |row| CoinMarketCap::Resources::Cryptocurrency.new(row) }
+        response['data'].map { |row| CoinMarketCap::Resources::Cryptocurrency.new(row) }
       end
     end
   end

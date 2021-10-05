@@ -9,7 +9,9 @@ module CoinMarketCap
       property 'status'
       property 'first_historical_data'
       property 'last_historical_data'
-      property 'platform', with: ->(v) { Platform.new(v) }
+      property 'platform', transform_with: lambda { |v|
+        CoinMarketCap::Resources::Platform.new(v) unless v.nil?
+      }
     end
   end
 end
