@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?symbol=USDT
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - CoinMarketCap Ruby Client/1.0.0
+      X-Cmc-Pro-Api-Key:
+      - test-coinmarketcap-api-key
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Oct 2021 04:08:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - origin
+      Cache-Control:
+      - no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6993ca1699085473-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":{"timestamp":"2021-10-05T04:08:33.095Z","error_code":0,"error_message":null,"elapsed":12,"credit_count":1,"notice":null},"data":[{"id":825,"name":"Tether","symbol":"USDT","slug":"tether","rank":5,"is_active":1,"first_historical_data":"2015-02-25T13:34:26.000Z","last_historical_data":"2021-10-05T03:59:09.000Z","platform":{"id":1027,"name":"Ethereum","symbol":"ETH","slug":"ethereum","token_address":"0xdac17f958d2ee523a2206206994597c13d831ec7"}}]}'
+  recorded_at: Tue, 05 Oct 2021 04:08:33 GMT
+recorded_with: VCR 6.0.0

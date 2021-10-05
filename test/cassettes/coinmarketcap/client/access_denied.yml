@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pro-api.coinmarketcap.com/v1/cryptocurrency/map
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - CoinMarketCap Ruby Client/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sat, 02 Oct 2021 16:55:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+      Vary:
+      - origin
+      Cache-Control:
+      - no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 697f7614def4547f-YYZ
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "status": {
+                "timestamp": "2021-10-02T16:55:56.959Z",
+                "error_code": 1002,
+                "error_message": "API key missing.",
+                "elapsed": 0,
+                "credit_count": 0
+            }
+        }
+  recorded_at: Sat, 02 Oct 2021 16:55:56 GMT
+recorded_with: VCR 6.0.0

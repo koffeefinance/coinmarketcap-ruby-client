@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - vendor/**/*
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 25
+Metrics/LineLength:
+  Max: 100
+Style/Documentation:
+  Enabled: false
