@@ -24,11 +24,12 @@ module CoinMarketCap
           assert_equal 1027, eth.id
           assert_equal 'Ethereum', eth.name
           assert_equal 'ETH', eth.symbol
+          assert_equal 2, eth.rank
           assert_equal 'ethereum', eth.slug
           assert_equal 1, eth.is_active
           assert_nil eth.status
-          assert_equal '2015-08-07T14:49:30.000Z', eth.first_historical_data
-          assert_equal '2021-10-05T02:19:02.000Z', eth.last_historical_data
+          assert_equal to_iso8601_date('2015-08-07T14:49:30.000Z'), eth.first_historical_data
+          assert_equal to_iso8601_date('2021-10-05T02:19:02.000Z'), eth.last_historical_data
           assert_nil eth.platform
         end
       end
