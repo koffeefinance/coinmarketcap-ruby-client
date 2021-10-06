@@ -1,5 +1,8 @@
 # CoinMarketCap Ruby API Client
 
+[![Gem Version](https://badge.fury.io/rb/coinmarketcap-ruby-client.svg)](https://badge.fury.io/rb/coinmarketcap-ruby-client) ![Build Status](https://github.com/koffeefinance/coinmarketcap-ruby-client/actions/workflows/ruby.yml/badge.svg)
+
+
 A ruby API client for [CoinMarketCap](https://coinmarketcap.com/api/documentation/v1/)
 
 # Table of Contents
