@@ -8,8 +8,8 @@ module CoinMarketCap
       property 'slug'
       property 'is_active'
       property 'status'
-      property 'first_historical_data'
-      property 'last_historical_data'
+      property 'first_historical_data', transform_with: ->(v) { iso8601_date(v) }
+      property 'last_historical_data', transform_with: ->(v) { iso8601_date(v) }
       property 'platform', transform_with: lambda { |v|
         CoinMarketCap::Resources::Platform.new(v) unless v.nil?
       }

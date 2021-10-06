@@ -60,8 +60,8 @@ currency.symbol # 'USDT'
 currency.rank # 5
 currency.slug # 'tether'
 currency.is_active # 1
-currency.first_historical_data # '2015-02-25T13:34:26.000Z'
-currency.last_historical_data # '2021-10-05T03:59:09.000Z'
+currency.first_historical_data # <Date: 2015-02-25 ((2457079j,0s,0n),+0s,2299161j)>
+currency.last_historical_data # <Date: 2021-10-05 ((2459493j,0s,0n),+0s,2299161j)>
 
 platform = currency.platform
 platform.id # 1027
