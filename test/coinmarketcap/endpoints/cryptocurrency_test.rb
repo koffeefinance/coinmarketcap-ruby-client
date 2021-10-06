@@ -24,6 +24,7 @@ module CoinMarketCap
           assert_equal 1027, eth.id
           assert_equal 'Ethereum', eth.name
           assert_equal 'ETH', eth.symbol
+          assert_equal 2, eth.rank
           assert_equal 'ethereum', eth.slug
           assert_equal 1, eth.is_active
           assert_nil eth.status

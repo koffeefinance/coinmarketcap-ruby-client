@@ -4,6 +4,7 @@ module CoinMarketCap
       property 'id'
       property 'name'
       property 'symbol'
+      property 'rank'
       property 'slug'
       property 'is_active'
       property 'status'
