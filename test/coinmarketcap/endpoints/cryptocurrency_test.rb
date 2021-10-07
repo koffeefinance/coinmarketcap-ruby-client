@@ -52,7 +52,6 @@ module CoinMarketCap
       def test_info_response_parsed_as_metadata_object
         VCR.use_cassette('info/ethereum') do
           info = @client.info(symbol: 'ETH')
-          assert !info.nil?
           assert_equal 1, info.size
 
           ethereum_metadata = info['ETH']
@@ -102,6 +101,46 @@ module CoinMarketCap
             multicoin-capital-portfolio
             paradigm-xzy-screener
           ], ethereum_metadata.tags
+        end
+      end
+
+      def test_info_response_parses_platform
+        VCR.use_cassette('info/usdt') do
+          info = @client.info(symbol: 'USDT')
+          ethereum_metadata = info['USDT']
+
+          platform = ethereum_metadata.platform
+          assert_equal 1027, platform.id
+          assert_equal 'Ethereum', platform.name
+          assert_equal 'ETH', platform.symbol
+          assert_equal 'ethereum', platform.slug
+          assert_equal '0xdac17f958d2ee523a2206206994597c13d831ec7', platform.token_address
+        end
+      end
+
+      def test_info_response_parses_urls
+        VCR.use_cassette('info/ethereum') do
+          info = @client.info(symbol: 'ETH')
+
+          ethereum_metadata = info['ETH']
+          urls = ethereum_metadata.urls
+
+          assert_equal ['https://www.ethereum.org/',
+                        'https://en.wikipedia.org/wiki/Ethereum'], urls.website
+          assert_equal ['https://twitter.com/ethereum'], urls.twitter
+          assert_equal ['https://forum.ethereum.org/', 'https://ethresear.ch/'], urls.message_board
+          assert_equal ['https://gitter.im/orgs/ethereum/rooms'], urls.chat
+          assert_equal [
+            'https://etherscan.io/',
+            'https://ethplorer.io/',
+            'https://blockchair.com/ethereum',
+            'https://bscscan.com/token/0x2170ed0880ac9a755fd29b2688956bd959f933f8',
+            'https://eth.tokenview.com/en/blocklist'
+          ], urls.explorer
+          assert_equal ['https://reddit.com/r/ethereum'], urls.reddit
+          assert_equal ['https://github.com/ethereum/wiki/wiki/White-Paper'], urls.technical_doc
+          assert_equal ['https://github.com/ethereum'], urls.source_code
+          assert_equal ['https://bitcointalk.org/index.php?topic=428589.0'], urls.announcement
         end
       end
     end

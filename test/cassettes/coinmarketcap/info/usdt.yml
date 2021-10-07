@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?symbol=USDT
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - CoinMarketCap Ruby Client/1.0.0
+      X-Cmc-Pro-Api-Key:
+      - test-coinmarketcap-api-key
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Oct 2021 04:04:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - origin,accept-encoding
+      Cache-Control:
+      - no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69a43e2f3d3f542b-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":{"timestamp":"2021-10-07T04:04:00.781Z","error_code":0,"error_message":null,"elapsed":230,"credit_count":1,"notice":null},"data":{"USDT":{"id":825,"name":"Tether","symbol":"USDT","category":"token","description":"Tether
+        (USDT) is a cryptocurrency and operates on the Ethereum platform. Tether has
+        a current supply of 71,385,677,474.96931 with 68,044,069,674.7408 in circulation.
+        The last known price of Tether is 1.00067805 USD and is up 0.02 over the last
+        24 hours. It is currently trading on 18616 active market(s) with $100,565,793,936.73
+        traded over the last 24 hours. More information can be found at https://tether.to.","slug":"tether","logo":"https://s2.coinmarketcap.com/static/img/coins/64x64/825.png","subreddit":"","notice":"","tags":["payments","stablecoin","stablecoin-asset-backed","binance-smart-chain","avalanche-ecosystem","solana-ecosystem"],"tag-names":["Payments","Stablecoin","Stablecoin
+        - Asset-Backed","Binance Smart Chain","Avalanche Ecosystem","Solana Ecosystem"],"tag-groups":["PROPERTY","PROPERTY","PROPERTY","PROPERTY","PROPERTY","PROPERTY"],"urls":{"website":["https://tether.to"],"twitter":["https://twitter.com/tether_to"],"message_board":[],"chat":["https://t.me/OfficialTether"],"explorer":["https://www.omniexplorer.info/asset/31","https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7","https://algoexplorer.io/asset/312769","https://tronscan.org/#/token20/TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t","https://bscscan.com/token/0x55d398326f99059ff775485246999027b3197955"],"reddit":[],"technical_doc":["https://tether.to/wp-content/uploads/2016/06/TetherWhitePaper.pdf"],"source_code":[],"announcement":[]},"platform":{"id":1027,"name":"Ethereum","symbol":"ETH","slug":"ethereum","token_address":"0xdac17f958d2ee523a2206206994597c13d831ec7"},"date_added":"2015-02-25T00:00:00.000Z","twitter_username":"tether_to","is_hidden":0}}}'
+  recorded_at: Thu, 07 Oct 2021 04:04:00 GMT
+recorded_with: VCR 6.0.0
