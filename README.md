@@ -81,7 +81,7 @@ See [CoinMarketCap ID Map](https://coinmarketcap.com/api/documentation/v1/#opera
 Fetches static metadata available for one or more cryptocurrencies.
 
 ```ruby
-  info = @client.info(symbol: 'ETH')
+  info = client.info(symbol: 'ETH')
 
   metadata = info['ETH']
   metadata.id # 1027
