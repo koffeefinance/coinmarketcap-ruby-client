@@ -2,7 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/coinmarketcap-ruby-client.svg)](https://badge.fury.io/rb/coinmarketcap-ruby-client) ![Build Status](https://github.com/koffeefinance/coinmarketcap-ruby-client/actions/workflows/ruby.yml/badge.svg)
 
-
 A ruby API client for [CoinMarketCap](https://coinmarketcap.com/api/documentation/v1/)
 
 # Table of Contents
@@ -12,6 +11,7 @@ A ruby API client for [CoinMarketCap](https://coinmarketcap.com/api/documentatio
   - [Get an API Key](#get-an-api-token)
   - [Configure](#configure)
   - [Get CoinMarketCap ID Map](#get-coinmarketcap-id-map)
+  - [Get Cryptocurrency Metadata](#get-cryptocurrency-metadata)
 - [Development](#development)
 - [Contributing](#contributing)
 - [License](#license)
@@ -74,7 +74,40 @@ platform.slug # 'ethereum'
 platform.token_address # '0xdac17f958d2ee523a2206206994597c13d831ec7'
 ```
 
-See [Cryptocurrency Map](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyMap) for detailed documentation.
+See [CoinMarketCap ID Map](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyMap) for detailed documentation.
+
+### Get Cryptocurrency Metadata
+
+Fetches static metadata available for one or more cryptocurrencies.
+
+```ruby
+  info = @client.info(symbol: 'ETH')
+
+  metadata = info['ETH']
+  metadata.id # 1027
+  metadata.name # 'Ethereum'
+  metadata.symbol # 'ETH'
+  metadata.category # 'coin'
+  metadata.description # 'Ethereum (ETH) is a cryptocurrency . Users are able to generate ETH ...'
+  metadata.slug # 'ethereum'
+  metadata.logo # 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'
+  metadata.notice # ''
+  metadata.tags # ['mineable', 'pow', 'smart-contracts', ...]
+  metadata.platform # nil
+
+  urls = metadata.urls
+  urls.website # ['https://www.ethereum.org/', 'https://en.wikipedia.org/wiki/Ethereum']
+  urls.twitter # ['https://twitter.com/ethereum']
+  urls.message_board # ['https://forum.ethereum.org/', 'https://ethresear.ch/']
+  urls.chat # ['https://gitter.im/orgs/ethereum/rooms']
+  urls.explorer # ['https://etherscan.io/', 'https://ethplorer.io/', 'https://blockchair.com/ethereum', ...]
+  urls.reddit # ['https://reddit.com/r/ethereum']
+  urls.technical_doc # ['https://github.com/ethereum/wiki/wiki/White-Paper']
+  urls.source_code # ['https://github.com/ethereum']
+  urls.announcement # ['https://bitcointalk.org/index.php?topic=428589.0']
+```
+
+See [Cryptocurrency Metadata](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyInfo) for detailed documentation
 
 ## Development
 
