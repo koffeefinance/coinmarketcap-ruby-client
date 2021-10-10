@@ -131,6 +131,21 @@ Returns a paginated list of all active cryptocurrencies with latest market data.
   listing.platform # nil
   listing.cmc_rank # 1
   listing.last_updated # <Date: 2021-10-08 ((2459496j,0s,0n),+0s,2299161j)>
+
+  quote_in_usd = listing.quote['USD']
+
+  quote_in_usd.price # 53853.84605722145
+  quote_in_usd.volume_24h # 35664606394.86121
+  quote_in_usd.percent_change_1h # -0.08049597
+  quote_in_usd.percent_change_24h # -1.93058
+  quote_in_usd.percent_change_7d # 23.57830268
+  quote_in_usd.percent_change_30d # 15.8506565
+  quote_in_usd.percent_change_60d # 24.08594399
+  quote_in_usd.percent_change_90d # 59.25745607
+  quote_in_usd.market_cap # 1014482918995.1969
+  quote_in_usd.market_cap_dominance # 44.5955
+  quote_in_usd.fully_diluted_market_cap # 1130930767201.65
+  quote_in_usd.last_updated # <Date: 2021-10-08 ((2459496j,0s,0n),+0s,2299161j)>
 ```
 
 See [Listings Latest](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsLatest) for detailed documentation.
