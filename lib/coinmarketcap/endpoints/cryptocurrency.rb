@@ -17,6 +17,13 @@ module CoinMarketCap
         response = get('cryptocurrency/listings/latest', options)
         response['data'].map { |row| CoinMarketCap::Resources::Listing.new(row) }
       end
+
+      def quotes_latest(options = {})
+        response = get('cryptocurrency/quotes/latest', options)
+        response['data'].map do |key, value|
+          [key, CoinMarketCap::Resources::Listing.new(value)]
+        end.to_h
+      end
     end
   end
 end
