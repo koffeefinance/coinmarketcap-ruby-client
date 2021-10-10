@@ -4,7 +4,7 @@
 
 ### 1.1.1 (2021/10/10)
 
-- [#11](https://github.com/koffeefinance/coinmarketcap-ruby-client/pull/11): Added support to fetch latest quotes - [@mathu97](https://github.com/mathu97).
+- [#12](https://github.com/koffeefinance/coinmarketcap-ruby-client/pull/12): Added support to fetch latest quotes - [@mathu97](https://github.com/mathu97).
 
 ### 1.1.0 (2021/10/09)
 
