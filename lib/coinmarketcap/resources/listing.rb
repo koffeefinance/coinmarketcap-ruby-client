@@ -5,6 +5,8 @@ module CoinMarketCap
       property 'name'
       property 'symbol'
       property 'slug'
+      property 'is_active'
+      property 'is_fiat'
       property 'cmc_rank'
       property 'num_market_pairs'
       property 'circulating_supply'

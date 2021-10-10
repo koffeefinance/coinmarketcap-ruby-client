@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=BTC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - CoinMarketCap Ruby Client/1.1.0
+      X-Cmc-Pro-Api-Key:
+      - test-coinmarketcap-api-key
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 10 Oct 2021 15:43:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - origin,accept-encoding
+      Cache-Control:
+      - no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69c0f6f95f5453e3-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":{"timestamp":"2021-10-10T15:43:30.820Z","error_code":0,"error_message":null,"elapsed":20,"credit_count":1,"notice":null},"data":{"BTC":{"id":1,"name":"Bitcoin","symbol":"BTC","slug":"bitcoin","num_market_pairs":8439,"date_added":"2013-04-28T00:00:00.000Z","tags":["mineable","pow","sha-256","store-of-value","state-channels","coinbase-ventures-portfolio","three-arrows-capital-portfolio","polychain-capital-portfolio","binance-labs-portfolio","arrington-xrp-capital","blockchain-capital-portfolio","boostvc-portfolio","cms-holdings-portfolio","dcg-portfolio","dragonfly-capital-portfolio","electric-capital-portfolio","fabric-ventures-portfolio","framework-ventures","galaxy-digital-portfolio","huobi-capital","alameda-research-portfolio","a16z-portfolio","1confirmation-portfolio","winklevoss-capital","usv-portfolio","placeholder-ventures-portfolio","pantera-capital-portfolio","multicoin-capital-portfolio","paradigm-xzy-screener"],"max_supply":21000000,"circulating_supply":18839937,"total_supply":18839937,"is_active":1,"platform":null,"cmc_rank":1,"is_fiat":0,"last_updated":"2021-10-10T15:42:02.000Z","quote":{"USD":{"price":55258.50096464278,"volume_24h":35452113494.92135,"percent_change_1h":0.16209148,"percent_change_24h":0.37808878,"percent_change_7d":15.47248778,"percent_change_30d":21.6571156,"percent_change_60d":18.48522689,"percent_change_90d":65.30250933,"market_cap":1041066676888.3092,"market_cap_dominance":44.9937,"fully_diluted_market_cap":1160428520257.5,"last_updated":"2021-10-10T15:42:02.000Z"}}}}}'
+  recorded_at: Sun, 10 Oct 2021 15:43:30 GMT
+recorded_with: VCR 6.0.0

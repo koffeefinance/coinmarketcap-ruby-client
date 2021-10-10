@@ -1,6 +1,10 @@
-### 1.1.1 (Next)
+### 1.1.2 (next)
 
 - your contributions here ...
+
+### 1.1.1 (2021/10/10)
+
+- [#12](https://github.com/koffeefinance/coinmarketcap-ruby-client/pull/12): Added support to fetch latest quotes - [@mathu97](https://github.com/mathu97).
 
 ### 1.1.0 (2021/10/09)
 
