@@ -12,6 +12,7 @@ A ruby API client for [CoinMarketCap](https://coinmarketcap.com/api/documentatio
   - [Configure](#configure)
   - [Get CoinMarketCap ID Map](#get-coinmarketcap-id-map)
   - [Get Cryptocurrency Metadata](#get-cryptocurrency-metadata)
+  - [Get Latest Listings](#get-latest-listings)
 - [Development](#development)
 - [Contributing](#contributing)
 - [License](#license)
@@ -107,7 +108,32 @@ Fetches static metadata available for one or more cryptocurrencies.
   urls.announcement # ['https://bitcointalk.org/index.php?topic=428589.0']
 ```
 
-See [Cryptocurrency Metadata](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyInfo) for detailed documentation
+See [Cryptocurrency Metadata](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyInfo) for detailed documentation.
+
+### Get Latest Listings
+
+Returns a paginated list of all active cryptocurrencies with latest market data.
+
+```ruby
+  listings = client.listings_latest
+  listing = listings.first
+
+  listing.id # 1
+  listing.name # 'Bitcoin'
+  listing.symbol # 'BTC'
+  listing.slug # 'bitcoin'
+  listing.num_market_pairs # 8527
+  listing.date_added # <Date: 2013-04-28 ((2456411j,0s,0n),+0s,2299161j)>
+  listing.tags # ['mineable', 'pow', 'sha-256', 'store-of-value', ...]
+  listing.max_supply # 21000000
+  listing.circulating_supply # 18837706
+  listing.total_supply # 18837706
+  listing.platform # nil
+  listing.cmc_rank # 1
+  listing.last_updated # <Date: 2021-10-08 ((2459496j,0s,0n),+0s,2299161j)>
+```
+
+See [Listings Latest](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsLatest) for detailed documentation.
 
 ## Development
 
