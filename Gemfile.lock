@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    coinmarketcap-ruby-client (1.1.0)
+    coinmarketcap-ruby-client (1.1.1)
       faraday (>= 1.8)
       faraday_middleware (>= 1.1)
       hashie
