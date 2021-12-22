@@ -9,6 +9,7 @@ A ruby API client for [CoinMarketCap](https://coinmarketcap.com/api/documentatio
 - [Installation](#installation)
 - [Usage](#usage)
   - [Get an API Key](#get-an-api-token)
+  - [Require](#require)
   - [Configure](#configure)
   - [Get CoinMarketCap ID Map](#get-coinmarketcap-id-map)
   - [Get Cryptocurrency Metadata](#get-cryptocurrency-metadata)
@@ -41,14 +42,32 @@ Or install it yourself as:
 
 Create an account on [CoinMarketCap](https://pro.coinmarketcap.com/) and get copy the API key from the developer console.
 
+### Require
+
+```ruby
+require 'coinmarketcap'
+```
+
 ### Configure
+
+Set global configurations for the client
 
 ```ruby
 CoinMarketCap::Api.configure do |config|
   config.api_key = 'api_key'
   config.user_agent = 'custom/user_agent' # Default: 'CoinMarketCap Ruby Client/1.0.0'
-  config.user_agent = 'https://pro-api.coinmarketcap.com/v1' # Default: 'https://pro-api.coinmarketcap.com/v1'
+  config.endpoint = 'https://pro-api.coinmarketcap.com/v1' # Default: 'https://pro-api.coinmarketcap.com/v1'
 end
+```
+
+or instantiate a local client
+
+```ruby
+client = CoinMarketCap::Api::Client.new(
+  api_key: 'api_key',
+  user_agent: 'custom/user_agent',
+  endpoint: 'https://pro-api.coinmarketcap.com/v1'
+)
 ```
 
 ### Get CoinMarketCap ID Map
